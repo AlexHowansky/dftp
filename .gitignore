@@ -1,0 +1,8 @@
+__pycache__/
+.claude/settings.local.json
+*.egg-info/
+.venv/
+certs/*.pem
+.pytest_cache/
+dist/
+build/
