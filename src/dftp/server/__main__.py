@@ -1,4 +1,4 @@
-"""Entry point for the FTP server: python -m claude_ftp.server"""
+"""Entry point for the FTP server: python -m dftp.server"""
 
 import argparse
 import asyncio

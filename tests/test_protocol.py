@@ -1,6 +1,6 @@
 """Tests for the protocol module."""
 
-from claude_ftp.protocol import MessageReader, encode_message
+from dftp.protocol import MessageReader, encode_message
 
 
 class TestEncodeMessage:

@@ -9,9 +9,9 @@ import pytest_asyncio
 from aioquic.asyncio import connect, serve
 from aioquic.quic.configuration import QuicConfiguration
 
-from claude_ftp.generate_cert import generate
-from claude_ftp.server.app import FtpServerProtocol
-from claude_ftp.client.connection import FtpClientProtocol, FtpConnection
+from dftp.generate_cert import generate
+from dftp.server.app import FtpServerProtocol
+from dftp.client.connection import FtpClientProtocol, FtpConnection
 
 
 @pytest.fixture

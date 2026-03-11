@@ -1,5 +1,5 @@
 [project]
-name = "claude-ftp"
+name = "dftp"
 version = "0.1.0"
 description = "FTP-like client and server over WebTransport (HTTP/3)"
 requires-python = ">=3.10"
@@ -15,9 +15,9 @@ dev = [
 ]
 
 [project.scripts]
-cftp-server = "claude_ftp.server.__main__:main"
-cftp-client = "claude_ftp.client.__main__:main"
-cftp-gencert = "claude_ftp.generate_cert:main"
+dftp-server = "dftp.server.__main__:main"
+dftp-client = "dftp.client.__main__:main"
+dftp-gencert = "dftp.generate_cert:main"
 
 [build-system]
 requires = ["setuptools>=68.0"]

@@ -3,7 +3,7 @@
 import pytest
 from pathlib import Path
 
-from claude_ftp.server.filesystem import Filesystem, FilesystemError
+from dftp.server.filesystem import Filesystem, FilesystemError
 
 
 @pytest.fixture
