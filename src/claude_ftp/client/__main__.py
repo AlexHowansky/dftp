@@ -18,11 +18,10 @@ def main():
     parser = argparse.ArgumentParser(description="WebTransport FTP Client")
     parser.add_argument("host", nargs="?", default="localhost", help="Server host")
     parser.add_argument("--port", type=int, default=4433, help="Server port")
-    parser.add_argument("--ca-cert", type=Path, help="CA certificate for verification")
     parser.add_argument(
-        "--insecure",
-        action="store_true",
-        help="Skip TLS certificate verification",
+        "--ca-cert",
+        type=Path,
+        help="CA certificate for verification (self-signed certs accepted by default)",
     )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
@@ -38,10 +37,10 @@ def main():
         max_datagram_frame_size=65536,
     )
 
-    if args.insecure:
-        config.verify_mode = ssl.CERT_NONE
-    elif args.ca_cert:
+    if args.ca_cert:
         config.load_verify_locations(str(args.ca_cert))
+    else:
+        config.verify_mode = ssl.CERT_NONE
 
     # Create event loop in a background thread
     loop = asyncio.new_event_loop()
